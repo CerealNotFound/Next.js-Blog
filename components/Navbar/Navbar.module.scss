@@ -38,6 +38,8 @@
     }
 
     #hamburger {
+      padding: none;
+      margin: none;
       @media screen and (min-width: 768px) {
         & {
           display: none;
@@ -62,13 +64,14 @@
           width: 30%;
         }
       }
-      
-      #menuHidden {
-      @extend #menuActive;
-      transform: translateX(150vw);
-    }
 
-      #navLinksWrapper {
+      @media screen and (min-width: 768px) {
+        & {
+          display: none;
+        }
+      }
+
+      #navMenuLinksWrapper {
         @include flex-center-vertically(space-evenly);
         flex-direction: column;
         height: 50%;
@@ -79,5 +82,17 @@
         }
       }
     }
+    #menuHidden {
+      display: none;
+      @extend #menuActive;
+      transform: translateX(150vw);
+
+      @media screen and (min-width: 768px) {
+        & {
+          display: none;
+        }
+      }
+    }
   }
 }
+
