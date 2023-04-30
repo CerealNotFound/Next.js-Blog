@@ -41,9 +41,6 @@ const Navbar = () => {
             <Link className={styles.navLink} href='/blogs'>
               Browse
             </Link>
-            <Link className={styles.navLink} href='/'>
-              Latest
-            </Link>
           </div>
         </div>
       </div>
