@@ -62,6 +62,11 @@
           width: 30%;
         }
       }
+      
+      #menuHidden {
+      @extend #menuActive;
+      transform: translateX(150vw);
+    }
 
       #navLinksWrapper {
         @include flex-center-vertically(space-evenly);
@@ -73,11 +78,6 @@
           margin: 1rem;
         }
       }
-    }
-
-    #menuHidden {
-      @extend #menuActive;
-      transform: translateX(150vw);
     }
   }
 }
