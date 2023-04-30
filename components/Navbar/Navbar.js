@@ -34,7 +34,7 @@ const Navbar = () => {
           />
         )}
         <div id={isOpen ? styles.menuActive : styles.menuHidden}>
-          <div id={styles.navLinksWrapper}>
+          <div id={styles.navMenuLinksWrapper}>
             <Link className={styles.navLink} href='/'>
               Home
             </Link>
