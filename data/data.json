@@ -1,0 +1,61 @@
+{
+  "blogs": [
+    {
+      "title": "Understanding Artificial Intelligence",
+      "blog_id": "12345",
+      "content": "Artificial intelligence (AI) is the simulation of human intelligence processes by machines, especially computer systems. These processes include learning (the acquisition of information and rules for using the information), reasoning (using rules to reach approximate or definite conclusions), and self-correction. AI applications include expert systems, speech recognition, and machine vision.",
+      "description": "AI is the simulation of human intelligence by machines. It involves learning, reasoning, and self-correction and has applications such as expert systems, speech recognition, and machine vision.",
+      "image": "https://images.unsplash.com/photo-1516110833967-0b5716ca1387?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YXJ0aWZpY2lhbCUyMGludGVsbGlnZW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "likes": 100,
+      "comments": ["That's so intruiguing!"]
+    },
+    {
+      "title": "Machine Learning vs Deep Learning",
+      "blog_id": "67890",
+      "content": "Machine learning is a subset of AI that involves training algorithms to make predictions or decisions based on data. Deep learning is a subset of machine learning that involves training neural networks with multiple layers to recognize patterns in data. Both machine learning and deep learning have a wide range of applications in fields such as healthcare, finance, and marketing.",
+      "description": "Machine learning is a subset of AI that involves training algorithms to make predictions based on data. Deep learning is a subset of machine learning that involves training neural networks to recognize patterns in data.",
+      "image": "https://images.unsplash.com/photo-1580584126903-c17d41830450?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YXJ0aWZpY2lhbCUyMGludGVsbGlnZW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "likes": 200,
+      "comments": ["I need some book recommendations on Machine Learning, any suggestions?"]
+    },
+    {
+      "title": "The Ethics of AI",
+      "blog_id": "54321",
+      "content": "As AI becomes more advanced and widespread, there are growing concerns about its potential impact on society. Issues such as bias, privacy, and job displacement are just a few of the ethical challenges that need to be addressed. It's important for developers and policymakers to work together to ensure that AI is developed and used in a responsible and ethical manner.",
+      "description": "As AI advances, concerns grow about its impact on society. Issues like bias, privacy, and job displacement are ethical challenges. It’s important for AI to be developed and used responsibly and ethically.",
+      "image": "https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGFydGlmaWNpYWwlMjBpbnRlbGxpZ2VuY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "likes": 50,
+      "comments": ["Ethics would be necessary in a powerful AI.", "What if the AI becomes satient and insane 😂"]
+    }
+  ],
+  "users": [
+    {
+      "user": "John",
+      "password": "$2a$10$SkB5uVBUxbEzb.tFm3ohpeSr4A7eG3S1QBx/8JLmyfkylWG8woWuW",
+      "comments": [
+        {
+          "blog_id": "12345",
+          "text": "That's so intriguing!"
+        },
+        {
+          "blog_id": "54321",
+          "text": "Ethics would be necessary in a powerful AI."
+        }
+      ]
+    },
+    {
+      "user": "Jane",
+      "password": "$2a$10$t0LbTorQaxporEYMFprZrODI5C9dAjC8v/PhL/PQEFINC6v.MX9lW",
+      "comments": [
+        {
+          "blog_id": "54321",
+          "text": "What if the AI becomes satient and insane 😂"
+        },
+        {
+          "blog_id": "67890",
+          "text": "I need some book recommendations Machine Learning, any suggestions?"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+@import './mixins';
+
+.card {
+  @include flex-center-vertically(center);
+  flex-direction: column;
+  width: 50vw;
+  margin: 2rem auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #eaeaea;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 10px #eaeaea;
+  backdrop-filter: blur(10px);
+
+  @media (max-width: 1104px) {
+    width: 60vw;
+  }
+
+  @media (max-width: 917px) {
+    width: 75vw;
+  }
+
+  @media (max-width: 722px) {
+    width: 90%;
+  }
+
+  .cardImage {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    object-fit: cover;
+
+    @media (max-width: 600px) {
+      width: 70%;
+    }
+
+    @media (max-width: 400px) {
+      width: 60%;
+    }
+
+    @media (max-width: 300px) {
+      width: 50%;
+    }
+  }
+
+  .cardTitle {
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #333333;
+  }
+
+  .cardDescription {
+    text-align: center;
+  }
+}
