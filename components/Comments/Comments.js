@@ -2,9 +2,9 @@ import styles from './Comments.module.scss';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-const Comments = ({ prop }) => {
+const Comments = ({ blog }) => {
   const [comment, setComment] = useState('');
-  const title = prop.title;
+  const title = blog.title;
   const router = useRouter();
   async function submitComment() {
     if (comment) {
@@ -45,11 +45,11 @@ const Comments = ({ prop }) => {
       >
         Submit
       </button>
-      {prop.comments.length === 1 && prop.comments[0] === '' ? (
+      {blog.comments.length === 1 && blog.comments[0] === '' ? (
         <p>No comments yet</p>
       ) : (
         <ul id={styles.commentsSection}>
-          {prop.comments.map((comment, index) => (
+          {blog.comments.map((comment, index) => (
             <li className={styles.comments} key={index}>
               {comment}
             </li>
@@ -62,7 +62,7 @@ const Comments = ({ prop }) => {
 
 export default Comments;
 
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   if (!mongoose.connections[0].readyState) {
     await mongoose.connect(process.env.MONGO_URI);
   }
