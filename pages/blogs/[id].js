@@ -24,37 +24,18 @@ const blog = ({ blog }) => {
 
 export default blog;
 
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   if (!mongoose.connections[0].readyState) {
     await mongoose.connect(process.env.MONGO_URI);
   }
   const blogId = context.params.id;
+  console.log(context.params);
   const all_blogs = await Blog.find();
   let blog = await all_blogs.find((bl) => bl.title === blogId);
 
-  // console.log(blog);
   return {
     props: {
-      // allBlogs: JSON.parse(JSON.stringify(all_blogs)),
       blog: JSON.parse(JSON.stringify(blog)),
     },
   };
 };
-
-export async function getStaticPaths() {
-  if (!mongoose.connections[0].readyState) {
-    await mongoose.connect(process.env.MONGO_URI);
-  }
-  // let blogs = await Blog.find();
-  const all_blogs = await Blog.find();
-  const allPaths = all_blogs.map((bl) => {
-    // console.log(bl.title);
-    return {
-      params: { id: bl.title.toString() },
-    };
-  });
-  return {
-    paths: allPaths,
-    fallback: false,
-  };
-}
