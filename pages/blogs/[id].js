@@ -17,7 +17,7 @@ const blog = ({ blog }) => {
       />
       <p id={styles.content}>{blog.content}</p>
       <h3 className={styles.like_commentsWrapper}>Likes ❤️: {blog.likes}</h3>
-      <Comments prop={blog} />
+      <Comments/>
     </div>
   );
 };
