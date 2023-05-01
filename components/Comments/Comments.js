@@ -62,19 +62,16 @@ const Comments = ({ prop }) => {
 
 export default Comments;
 
-// export const getStaticProps = async (context) => {
-//   if (!mongoose.connections[0].readyState) {
-//     await mongoose.connect(process.env.MONGO_URI);
-//   }
-//   const blogId = context.params.id;
-//   const all_blogs = await Blog.find();
-//   let blog = await all_blogs.find((bl) => bl.title === blogId);
-
-//   // console.log(blog);
-//   return {
-//     props: {
-//       // allBlogs: JSON.parse(JSON.stringify(all_blogs)),
-//       blog: JSON.parse(JSON.stringify(blog)),
-//     },
-//   };
-// };
+export const getStaticProps = async (context) => {
+  if (!mongoose.connections[0].readyState) {
+    await mongoose.connect(process.env.MONGO_URI);
+  }
+  const blogId = context.params.id;
+  const all_blogs = await Blog.find();
+  let blog = await all_blogs.find((bl) => bl.title === blogId);
+  return {
+    props: {
+      blog: JSON.parse(JSON.stringify(blog)),
+    },
+  };
+};
